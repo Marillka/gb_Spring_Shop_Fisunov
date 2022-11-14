@@ -1,0 +1,3 @@
+bob
+role	user
+email	bob@gmail.com
