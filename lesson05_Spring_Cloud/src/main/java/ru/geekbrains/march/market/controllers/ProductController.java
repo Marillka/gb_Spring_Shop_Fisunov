@@ -1,12 +1,12 @@
-package ru.rayumov.market.controllers;
+package ru.geekbrains.march.market.controllers;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import ru.rayumov.market.converters.ProductConverter;
-import ru.rayumov.market.dtos.ProductDto;
-import ru.rayumov.market.exceptions.ResourceNotFoundException;
-import ru.rayumov.market.services.ProductService;
+import ru.geekbrains.march.market.converters.ProductConverter;
+import ru.geekbrains.march.market.dtos.ProductDto;
+import ru.geekbrains.march.market.exceptions.ResourceNotFoundException;
+import ru.geekbrains.march.market.services.ProductService;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -15,15 +15,15 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/v1/products")
 @RequiredArgsConstructor
 public class ProductController {
-
     private final ProductService productService;
     private final ProductConverter productConverter;
 
     @GetMapping
-    public List<ProductDto> getAllProduct() {
+    public List<ProductDto> getAllProducts() {
         return productService.findAll().stream()
                 .map(p -> productConverter.entityToDto(p))
                 .collect(Collectors.toList());
+
     }
 
     @GetMapping("/{id}")
@@ -31,14 +31,14 @@ public class ProductController {
         return productConverter.entityToDto(productService.findById(id).orElseThrow(() -> new ResourceNotFoundException("Продукт с id: " + id + " не найден")));
     }
 
-    @DeleteMapping("/{id}")
-    public void deleteProductById(@PathVariable Long id) {
-        productService.deleteByID(id);
-    }
-
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void creteNewProduct(@RequestBody ProductDto productDto) {
+    public void createNewProducts(@RequestBody ProductDto productDto) {
         productService.createNewProduct(productDto);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteProductById(@PathVariable Long id) {
+        productService.deleteById(id);
     }
 }

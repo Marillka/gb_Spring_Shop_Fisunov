@@ -6,6 +6,7 @@
       <directory url="file://$PROJECT_DIR$/lesson04/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/lesson04_SOAP/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/lesson04_Spring_AOP/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
@@ -14,6 +15,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="lesson02" />
+        <module name="lesson05_Spring_Cloud" />
         <module name="lesson03" />
         <module name="lesson03_Homework" />
         <module name="lesson04_SOAP" />
@@ -47,6 +49,7 @@
       <module name="lesson04" options="-parameters" />
       <module name="lesson04_Homework" options="-parameters" />
       <module name="lesson04_SOAP" options="-parameters" />
+      <module name="lesson05_Spring_Cloud" options="-parameters" />
     </option>
   </component>
 </project>
