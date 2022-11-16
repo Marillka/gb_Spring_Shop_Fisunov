@@ -14,20 +14,19 @@
     <file url="file://$PROJECT_DIR$/lesson03/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson03_Homework/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson03_Homework/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/lesson04/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/lesson04/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson04_Homework/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson04_Homework/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson04_Homework/src/main/resources/groups.xsd" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/lesson04_Homework/src/main/resources/students.xsd" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/lesson04_SOAP/cart-service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/lesson04_SOAP/core-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson04_SOAP/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson04_Spring_AOP/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson04_Spring_AOP/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/cart-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/cart-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/core-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/core-service/src/main/resources/db/migration/V1__init.sql" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

@@ -7,6 +7,7 @@
       <directory url="file://$PROJECT_DIR$/lesson04_SOAP/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/lesson04_Spring_AOP/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/core-service/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
@@ -15,23 +16,22 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="lesson02" />
-        <module name="lesson05_Spring_Cloud" />
         <module name="lesson03" />
-        <module name="lesson03_Homework" />
+        <module name="cart-service" />
         <module name="lesson04_SOAP" />
-        <module name="lesson01_BasicApplication" />
         <module name="lesson01_Homework" />
         <module name="gb_Spring_Shop_Fisunov" />
         <module name="lesson04_Spring_AOP" />
         <module name="jwtBuilderTest" />
-        <module name="lesson04_Homework" />
         <module name="lesson02_Homework" />
+        <module name="core-service" />
+        <module name="lesson03_Homework" />
+        <module name="lesson01_BasicApplication" />
+        <module name="api" />
+        <module name="lesson04_Homework" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="api" target="11" />
-      <module name="cart-service" target="11" />
-      <module name="core-service" target="11" />
       <module name="gb_Spring_Shop_Fisunov" target="1.5" />
       <module name="lesson04" target="11" />
     </bytecodeTargetLevel>
@@ -49,7 +49,7 @@
       <module name="lesson04" options="-parameters" />
       <module name="lesson04_Homework" options="-parameters" />
       <module name="lesson04_SOAP" options="-parameters" />
-      <module name="lesson05_Spring_Cloud" options="-parameters" />
+      <module name="lesson05_Spring_Cloud" options="" />
     </option>
   </component>
 </project>
