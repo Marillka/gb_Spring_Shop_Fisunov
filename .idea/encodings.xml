@@ -21,12 +21,33 @@
     <file url="file://$PROJECT_DIR$/lesson04_SOAP/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson04_Spring_AOP/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson04_Spring_AOP/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson05_Homework/lesson05_Homework_api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson05_Homework/lesson05_Homework_api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson05_Homework/lesson05_Homework_cart-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson05_Homework/lesson05_Homework_core-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson05_Homework/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson05_Homework/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/cart-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/cart-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/core-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson05_Spring_Cloud/core-service/src/main/resources/db/migration/V1__init.sql" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson06_Spring_Cloud2/api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson06_Spring_Cloud2/api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson06_Spring_Cloud2/cart-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson06_Spring_Cloud2/lesson06-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson06_Spring_Cloud2/lesson06-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson06_Spring_Cloud2/lesson06-cart-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson06_Spring_Cloud2/lesson06-core-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson06_Spring_Cloud2/lesson06_api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson06_Spring_Cloud2/lesson06_api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson06_Spring_Cloud2/lesson06_cart-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson06_Spring_Cloud2/lesson06_cart-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson06_Spring_Cloud2/lesson06_core-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson06_Spring_Cloud2/lesson06_core-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson06_Spring_Cloud2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson06_Spring_Cloud2/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

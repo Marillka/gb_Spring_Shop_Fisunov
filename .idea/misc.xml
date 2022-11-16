@@ -16,6 +16,12 @@
         <option value="$PROJECT_DIR$/lesson04_Spring_AOP/pom.xml" />
         <option value="$PROJECT_DIR$/lesson04_Homework/pom.xml" />
         <option value="$PROJECT_DIR$/lesson05_Spring_Cloud/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson05_Homework/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson06_Spring_Cloud2/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson06_Spring_Cloud2/api/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson06_Spring_Cloud2/cart-service/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson05_Spring_Cloud/cart-service/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson06_Spring_Cloud2/core-service/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -23,6 +29,9 @@
         <option value="$PROJECT_DIR$/lesson04_SOAP/api/pom.xml" />
         <option value="$PROJECT_DIR$/lesson04_SOAP/cart-service/pom.xml" />
         <option value="$PROJECT_DIR$/lesson04_SOAP/core-service/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson06_Spring_Cloud2/lesson06-api/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson06_Spring_Cloud2/lesson06-cart-service/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson06_Spring_Cloud2/lesson06-core-service/pom.xml" />
       </set>
     </option>
   </component>
