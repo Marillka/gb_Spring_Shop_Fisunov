@@ -27,7 +27,11 @@ public class UserService implements UserDetailsService {
     private final UserConverter userConverter;
 
     public Optional<User> findByUsername(String username) {
-        return userRepository.findByUsername(username);
+        Optional<User> userOptional = userRepository.findByUsername(username);
+        if (userOptional.isEmpty()) {
+            throw new UsernameNotFoundException(String.format("Пользовтель '%' не найден", username));
+        }
+        return userOptional;
     }
 
     @Override

@@ -129,7 +129,12 @@ angular.module('market', ['ngStorage']).controller('indexController', function (
     // --------------------------------- ORDER -----------------------------------
 
     $scope.createOrder = function () {
-        //...
+        $http.post( marketCoreContextPath + '/orders')
+            .then(function successCallback(response) {
+                alert('Заказ создан успешно');
+            }, function errorCallback(response) {
+                alert('Не удалось создать заказ');
+            });
     }
 
     // --------------------------------- OTHER -----------------------------------

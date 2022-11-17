@@ -67,11 +67,11 @@ values (1, 1),
 
 create table orders
 (
-    id         bigserial primary key,
-    user_id    bigint references users (id),
+    id          bigserial primary key,
+    user_id     bigint references users (id),
     total_price numeric(8, 2),
-    created_at timestamp default current_timestamp,
-    updated_at timestamp default current_timestamp
+    created_at  timestamp default current_timestamp,
+    updated_at  timestamp default current_timestamp
 
 );
 

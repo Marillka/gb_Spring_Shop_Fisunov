@@ -29,7 +29,6 @@ public class ProductService {
         Product product = new Product();
         product.setTitle(productDto.getTitle());
         product.setPrice(productDto.getPrice());
-//        product.setCategory(categoryService.findByTitle(productDto.getTitle()).get());
         product.setCategory(categoryService.findByTitle(productDto.getTitle()).orElseThrow(() -> new ResourceNotFoundException("Категория с названием: " + productDto.getCategoryTitle() + " не найдена")));
 
         productRepository.save(product);
@@ -38,5 +37,9 @@ public class ProductService {
 
     public Optional<Product> findById(Long id) {
         return productRepository.findById(id);
+    }
+
+    public Optional<Product> findByTitle(String productTitle) {
+        return productRepository.findByTitle(productTitle);
     }
 }
