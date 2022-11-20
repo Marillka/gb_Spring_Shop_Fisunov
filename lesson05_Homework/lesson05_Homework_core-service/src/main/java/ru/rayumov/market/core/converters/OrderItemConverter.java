@@ -3,7 +3,7 @@
 //import lombok.RequiredArgsConstructor;
 //import org.springframework.stereotype.Component;
 //import ru.rayumov.market.api.OrderItemDto;
-//import ru.rayumov.market.core.entities.OrderItem;
+//import ru.rayumov.market.core.ru.rayumov.market.auth.entities.OrderItem;
 //
 //@Component
 //@RequiredArgsConstructor

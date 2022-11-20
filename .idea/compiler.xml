@@ -15,29 +15,35 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="lesson02" />
-        <module name="lesson03" />
-        <module name="cart-service" />
         <module name="lesson06_front-service" />
-        <module name="lesson04_SOAP" />
         <module name="lesson01_Homework" />
-        <module name="lesson06_gateway-service" />
-        <module name="lesson06_auth-service" />
-        <module name="gb_Spring_Shop_Fisunov" />
+        <module name="lesson06_Homework_auth-service" />
         <module name="lesson04_Spring_AOP" />
         <module name="jwtBuilderTest" />
-        <module name="lesson02_Homework" />
-        <module name="core-service" />
-        <module name="lesson03_Homework" />
+        <module name="lesson06_Homework_front-service" />
         <module name="lesson01_BasicApplication" />
         <module name="lesson06_core-service" />
         <module name="lesson06_cart-service" />
         <module name="lesson05_Homework_cart-service" />
         <module name="api" />
         <module name="lesson04_Homework" />
+        <module name="lesson06_Homework_api" />
         <module name="lesson05_Homework_api" />
         <module name="lesson05_Homework_core-service" />
         <module name="lesson06_api" />
+        <module name="lesson02" />
+        <module name="lesson03" />
+        <module name="cart-service" />
+        <module name="lesson04_SOAP" />
+        <module name="lesson06_gateway-service" />
+        <module name="lesson06_auth-service" />
+        <module name="gb_Spring_Shop_Fisunov" />
+        <module name="lesson06_Homework_cart-service" />
+        <module name="lesson06_Homework_core-service" />
+        <module name="lesson02_Homework" />
+        <module name="core-service" />
+        <module name="lesson03_Homework" />
+        <module name="lesson06_Homework_gateway-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -72,6 +78,11 @@
       <module name="lesson05_Spring_Cloud" options="" />
       <module name="lesson06-cart-service" options="-parameters" />
       <module name="lesson06-core-service" options="-parameters" />
+      <module name="lesson06_Homework_auth-service" options="-parameters" />
+      <module name="lesson06_Homework_cart-service" options="-parameters" />
+      <module name="lesson06_Homework_core-service" options="-parameters" />
+      <module name="lesson06_Homework_front-service" options="-parameters" />
+      <module name="lesson06_Homework_gateway-service" options="-parameters" />
       <module name="lesson06_auth-service" options="-parameters" />
       <module name="lesson06_cart-service" options="-parameters" />
       <module name="lesson06_core-service" options="-parameters" />
