@@ -13,6 +13,8 @@
         <module>lesson06_core-service</module>
         <module>lesson06_cart-service</module>
         <module>lesson06_api</module>
+        <module>lesson06_front-service</module>
+        <module>lesson06_auth-service</module>
     </modules>
 
     <properties>

@@ -22,6 +22,7 @@
         <option value="$PROJECT_DIR$/lesson06_Spring_Cloud2/cart-service/pom.xml" />
         <option value="$PROJECT_DIR$/lesson05_Spring_Cloud/cart-service/pom.xml" />
         <option value="$PROJECT_DIR$/lesson06_Spring_Cloud2/core-service/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson06_Spring_Cloud2/lesson06_gateway-service/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

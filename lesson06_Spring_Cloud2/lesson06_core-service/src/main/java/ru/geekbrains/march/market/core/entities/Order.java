@@ -24,11 +24,10 @@ public class Order {
     @Column(name = "total_price")
     private BigDecimal totalPrice;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
 
-    // CascadeType.All  - чтобы когда вы заказ сохраняли - OrderItem привязанные к нему тоже сразу сохранились.
+    @Column(name = "username")
+    private String username;
+
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> items;
 
