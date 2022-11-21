@@ -4,9 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-        <module>core-service</module>
-        <module>cart-service</module>
-        <module>api</module>
+        <module>lesson05_core-service</module>
+        <module>lesson05_cart-service</module>
+        <module>lesson05_api</module>
     </modules>
 
     <groupId>org.example</groupId>

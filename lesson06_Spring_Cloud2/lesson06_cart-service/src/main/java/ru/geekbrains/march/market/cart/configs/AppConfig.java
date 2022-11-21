@@ -82,8 +82,10 @@ public class AppConfig {
 
     private final ProductServiceIntegrationProperties productServiceIntegrationProperties;
 
+    //WebClient умеет отправлять запросы и получать ответы
     @Bean
     public WebClient productServiceWebClient() {
+        // Настраиваем сетевой уровень TCP/IP
         TcpClient tcpClient = TcpClient
                 .create()
                 .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, productServiceIntegrationProperties.getConnectTimeout())
@@ -93,10 +95,20 @@ public class AppConfig {
                 });
 
         return WebClient
-                .builder()
-                .baseUrl(productServiceIntegrationProperties.getUrl())
-                .clientConnector(new ReactorClientHttpConnector(HttpClient.from(tcpClient)))
+                .builder()// паттерн builder
+                .baseUrl(productServiceIntegrationProperties.getUrl())// url
+                .clientConnector(new ReactorClientHttpConnector(HttpClient.from(tcpClient)))// устанавливаем как будет осуществлятся передача на сетевом уровне.
                 .build();
 
     }
+    /*
+    Сам по себе сокет в Java никакого смысла не несет. Есть соединение и есть.
+    А что с ним делать?
+    Если пилим REST клиент, то видимо мы хотим посылать какие то http запросы.
+    Оборачиваем Сеть (tcp) в http протокол.
+    Работаем с асинхронным клиентом - это реактивное программирование.
+    Мы посылваем какое то событие, когда оно выполнится мы хотим что то сделать.
+    Рекативное программирование - когда выполнится наше действие.
+    Добавлям ReactorClientHttpConnector для работы в асинхронном режиме, который позволяет выстраивать вот эту цепочку действий (пошлем запрос, когда придет ответ - обработаем).
+     */
 }
