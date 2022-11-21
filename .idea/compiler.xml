@@ -56,6 +56,7 @@
       <module name="api (1)" target="18" />
       <module name="cart-service (1)" target="11" />
       <module name="core-service (1)" target="11" />
+      <module name="gb_Spring_Shop_Fisunov" target="1.5" />
       <module name="lesson04" target="11" />
       <module name="lesson06-api" target="18" />
       <module name="lesson06-cart-service" target="11" />
