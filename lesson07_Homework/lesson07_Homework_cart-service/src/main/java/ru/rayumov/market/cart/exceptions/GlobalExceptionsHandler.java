@@ -5,7 +5,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-//  @ControllerAdvice - означает,что код который написан в этом классе, нужно добавить ко все контроллерам.
 @ControllerAdvice
 public class GlobalExceptionsHandler {
 

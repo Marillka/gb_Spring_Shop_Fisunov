@@ -9,8 +9,6 @@ import ru.rayumov.market.api.CartDto;
 @RequiredArgsConstructor
 public class CartServiceIntegration {
 
-//    private final RestTemplate restTemplate;
-
     private final WebClient cartServiceWebClient;
 
 
@@ -22,13 +20,14 @@ public class CartServiceIntegration {
                 .block();
     }
 
-//    public CartDto getCurrentCart() {
-//        return restTemplate.getForObject("http://localhost:8190/market-cart/api/v1/cart", CartDto.class);
-//    }
+    public void clearCart() {
+        cartServiceWebClient.delete()
+                .uri("api/v1/cart/clear")
+                .retrieve()
+                .bodyToMono(Void.class)
+                .block();
+    }
 
-//    public void clearCart() {
-//        restTemplate.getForObject("http://localhost:8190/market-cart/api/v1/cart/delete/all", ResponseEntity.class);
-//    }
 }
 
 

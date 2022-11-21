@@ -38,9 +38,8 @@ public class OrderService {
 //                .collect(Collectors.toList());
 //    }
 
-    // добавить проверку на пустую корзину.
 
-    // orderConverter
+
     @Transactional
     public void createNewOrder(String username) {
 
@@ -73,7 +72,7 @@ public class OrderService {
             order.setItems(orderItems);
             orderRepository.save(order);
 
-//            cartServiceIntegration.clearCart();
+            cartServiceIntegration.clearCart();
 
     }
 }
