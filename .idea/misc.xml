@@ -34,6 +34,8 @@
         <option value="$PROJECT_DIR$/lesson07_Spring_Testing/lesson07_core-service/pom.xml" />
         <option value="$PROJECT_DIR$/lesson07_Spring_Testing/lesson07_front-service/pom.xml" />
         <option value="$PROJECT_DIR$/lesson07_Spring_Testing/lesson07_gateway-service/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson07_Homework/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson07_Homework/lesson07_Homework_api/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

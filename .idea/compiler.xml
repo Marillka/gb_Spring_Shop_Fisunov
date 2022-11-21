@@ -15,8 +15,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="lesson07_Homework_gateway-service" />
         <module name="lesson06_front-service" />
         <module name="lesson01_Homework" />
+        <module name="lesson07_Homework_api" />
         <module name="lesson06_Homework_auth-service" />
         <module name="lesson04_Spring_AOP" />
         <module name="jwtBuilderTest" />
@@ -28,6 +30,7 @@
         <module name="lesson07_gateway-service" />
         <module name="lesson05_core-service" />
         <module name="lesson06_cart-service" />
+        <module name="lesson07_Homework_auth-service" />
         <module name="lesson05_Homework_cart-service" />
         <module name="lesson07_core-service" />
         <module name="lesson04_Homework" />
@@ -48,6 +51,9 @@
         <module name="lesson05_cart-service" />
         <module name="lesson02_Homework" />
         <module name="lesson03_Homework" />
+        <module name="lesson07_Homework_front-service" />
+        <module name="lesson07_Homework_cart-service" />
+        <module name="lesson07_Homework_core-service" />
         <module name="lesson06_Homework_gateway-service" />
         <module name="lesson07_front-service" />
       </profile>
@@ -95,6 +101,11 @@
       <module name="lesson06_core-service" options="-parameters" />
       <module name="lesson06_front-service" options="-parameters" />
       <module name="lesson06_gateway-service" options="-parameters" />
+      <module name="lesson07_Homework_auth-service" options="-parameters" />
+      <module name="lesson07_Homework_cart-service" options="-parameters" />
+      <module name="lesson07_Homework_core-service" options="-parameters" />
+      <module name="lesson07_Homework_front-service" options="-parameters" />
+      <module name="lesson07_Homework_gateway-service" options="-parameters" />
       <module name="lesson07_auth-service" options="-parameters" />
       <module name="lesson07_cart-service" options="-parameters" />
       <module name="lesson07_core-service" options="-parameters" />
