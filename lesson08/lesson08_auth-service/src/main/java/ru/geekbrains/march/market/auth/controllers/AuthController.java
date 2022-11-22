@@ -38,10 +38,4 @@ public class AuthController {
         String token = jwtTokenUtil.generateToken(userDetails);
         return ResponseEntity.ok(new JwtResponse(token));
     }
-
-//    @GetMapping("/about_me")
-//    public StringResponse getCurrentUserInfo(Principal principal) {
-//        User user = userService.findByUsername(principal.getName()).get();
-//        return new StringResponse(user.getUsername() + " " + user.getEmail());
-//    }
 }

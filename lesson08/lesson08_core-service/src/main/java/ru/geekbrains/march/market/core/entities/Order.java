@@ -24,7 +24,6 @@ public class Order {
     @Column(name = "total_price")
     private BigDecimal totalPrice;
 
-
     @Column(name = "username")
     private String username;
 

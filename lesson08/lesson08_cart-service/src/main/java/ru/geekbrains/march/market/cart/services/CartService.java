@@ -7,26 +7,33 @@ import ru.geekbrains.march.market.cart.integrations.ProductServiceIntegration;
 import ru.geekbrains.march.market.cart.utils.Cart;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 @Service
 @RequiredArgsConstructor
 public class CartService {
     private final ProductServiceIntegration productServiceIntegration;
-    private Cart cart;
+    private Map<String, Cart> carts;
 
     @PostConstruct
     public void init() {
-        cart = new Cart();
-        cart.setItems(new ArrayList<>());
+        carts = new HashMap<>();
     }
 
-    public Cart getCurrentCart() {
-        return cart;
+    public Cart getCurrentCart(String cartId) {
+        if (!carts.containsKey(cartId)) {
+            Cart cart = new Cart();
+            carts.put(cartId, cart);
+        }
+        return carts.get(cartId);
     }
 
-    public void addToCart(Long productId) {
+    public void addToCart(String cartId, Long productId) {
         ProductDto p = productServiceIntegration.findById(productId);
-        cart.add(p);
+        getCurrentCart(cartId).add(p);
+    }
+    public void clearCart(String cartId) {
+        getCurrentCart(cartId).clear();
     }
 }
