@@ -23,6 +23,7 @@
         <module name="lesson04_Spring_AOP" />
         <module name="jwtBuilderTest" />
         <module name="lesson07_api" />
+        <module name="lesson08_gateway-service" />
         <module name="lesson06_Homework_front-service" />
         <module name="lesson01_BasicApplication" />
         <module name="lesson07_cart-service" />
@@ -32,10 +33,13 @@
         <module name="lesson06_cart-service" />
         <module name="lesson07_Homework_auth-service" />
         <module name="lesson05_Homework_cart-service" />
+        <module name="lesson08_front-service" />
         <module name="lesson07_core-service" />
         <module name="lesson04_Homework" />
         <module name="lesson06_Homework_api" />
         <module name="lesson05_Homework_api" />
+        <module name="lesson08_cart-service" />
+        <module name="lesson08_core-service" />
         <module name="lesson05_Homework_core-service" />
         <module name="lesson06_api" />
         <module name="lesson02" />
@@ -54,8 +58,10 @@
         <module name="lesson07_Homework_front-service" />
         <module name="lesson07_Homework_cart-service" />
         <module name="lesson07_Homework_core-service" />
+        <module name="lesson08_api" />
         <module name="lesson06_Homework_gateway-service" />
         <module name="lesson07_front-service" />
+        <module name="lesson08_auth-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -111,6 +117,11 @@
       <module name="lesson07_core-service" options="-parameters" />
       <module name="lesson07_front-service" options="-parameters" />
       <module name="lesson07_gateway-service" options="-parameters" />
+      <module name="lesson08_auth-service" options="-parameters" />
+      <module name="lesson08_cart-service" options="-parameters" />
+      <module name="lesson08_core-service" options="-parameters" />
+      <module name="lesson08_front-service" options="-parameters" />
+      <module name="lesson08_gateway-service" options="-parameters" />
     </option>
   </component>
 </project>

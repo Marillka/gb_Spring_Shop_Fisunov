@@ -95,6 +95,15 @@
     <file url="file://$PROJECT_DIR$/lesson07_Spring_Testing/lesson07_gateway-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson07_Spring_Testing/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson07_Spring_Testing/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson08/lesson08_api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson08/lesson08_api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson08/lesson08_auth-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson08/lesson08_cart-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson08/lesson08_core-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson08/lesson08_front-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson08/lesson08_gateway-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson08/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson08/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

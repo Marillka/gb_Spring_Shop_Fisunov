@@ -133,8 +133,10 @@ angular.module('market', ['ngStorage']).controller('indexController', function (
         $http.post(marketCoreContextPath + '/orders')
             .then(function successCallback(response) {
                 console.log(response)
+                $scope.fillCart();
                 alert('Заказ создан успешно');
             }, function errorCallback(response) {
+                $scope.fillCart();
                 alert('Не удалось создать заказ');
             });
     }
