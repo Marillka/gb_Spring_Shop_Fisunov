@@ -16,35 +16,41 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="lesson07_Homework_gateway-service" />
-        <module name="lesson06_front-service" />
         <module name="lesson01_Homework" />
-        <module name="lesson07_Homework_api" />
-        <module name="lesson06_Homework_auth-service" />
+        <module name="lesson08_Homework_api" />
         <module name="lesson04_Spring_AOP" />
         <module name="jwtBuilderTest" />
-        <module name="lesson07_api" />
         <module name="lesson08_gateway-service" />
+        <module name="lesson07_api" />
         <module name="lesson06_Homework_front-service" />
-        <module name="lesson01_BasicApplication" />
         <module name="lesson07_cart-service" />
-        <module name="lesson06_core-service" />
-        <module name="lesson07_gateway-service" />
         <module name="lesson05_core-service" />
-        <module name="lesson06_cart-service" />
-        <module name="lesson07_Homework_auth-service" />
         <module name="lesson05_Homework_cart-service" />
+        <module name="lesson08_Homework_auth-service" />
         <module name="lesson08_front-service" />
         <module name="lesson07_core-service" />
         <module name="lesson04_Homework" />
         <module name="lesson06_Homework_api" />
-        <module name="lesson05_Homework_api" />
-        <module name="lesson08_cart-service" />
-        <module name="lesson08_core-service" />
         <module name="lesson05_Homework_core-service" />
         <module name="lesson06_api" />
         <module name="lesson02" />
-        <module name="lesson05_api" />
         <module name="lesson03" />
+        <module name="lesson05_cart-service" />
+        <module name="lesson08_api" />
+        <module name="lesson06_front-service" />
+        <module name="lesson07_Homework_api" />
+        <module name="lesson06_Homework_auth-service" />
+        <module name="lesson08_Homework_gateway-service" />
+        <module name="lesson01_BasicApplication" />
+        <module name="lesson06_core-service" />
+        <module name="lesson07_gateway-service" />
+        <module name="lesson06_cart-service" />
+        <module name="lesson07_Homework_auth-service" />
+        <module name="lesson08_Homework_front-service" />
+        <module name="lesson05_Homework_api" />
+        <module name="lesson08_cart-service" />
+        <module name="lesson08_core-service" />
+        <module name="lesson05_api" />
         <module name="lesson04_SOAP" />
         <module name="lesson06_gateway-service" />
         <module name="lesson07_auth-service" />
@@ -52,13 +58,13 @@
         <module name="gb_Spring_Shop_Fisunov" />
         <module name="lesson06_Homework_cart-service" />
         <module name="lesson06_Homework_core-service" />
-        <module name="lesson05_cart-service" />
         <module name="lesson02_Homework" />
         <module name="lesson03_Homework" />
         <module name="lesson07_Homework_front-service" />
+        <module name="lesson08_Homework_core-service" />
         <module name="lesson07_Homework_cart-service" />
         <module name="lesson07_Homework_core-service" />
-        <module name="lesson08_api" />
+        <module name="lesson08_Homework_cart-service" />
         <module name="lesson06_Homework_gateway-service" />
         <module name="lesson07_front-service" />
         <module name="lesson08_auth-service" />
@@ -73,6 +79,12 @@
       <module name="lesson06-api" target="18" />
       <module name="lesson06-cart-service" target="11" />
       <module name="lesson06-core-service" target="11" />
+      <module name="lesson08_api (1)" target="18" />
+      <module name="lesson08_auth-service (1)" target="18" />
+      <module name="lesson08_cart-service (1)" target="11" />
+      <module name="lesson08_core-service (1)" target="11" />
+      <module name="lesson08_front-service (1)" target="18" />
+      <module name="lesson08_gateway-service (1)" target="18" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -117,11 +129,21 @@
       <module name="lesson07_core-service" options="-parameters" />
       <module name="lesson07_front-service" options="-parameters" />
       <module name="lesson07_gateway-service" options="-parameters" />
+      <module name="lesson08_Homework_auth-service" options="-parameters" />
+      <module name="lesson08_Homework_cart-service" options="-parameters" />
+      <module name="lesson08_Homework_core-service" options="-parameters" />
+      <module name="lesson08_Homework_front-service" options="-parameters" />
+      <module name="lesson08_Homework_gateway-service" options="-parameters" />
       <module name="lesson08_auth-service" options="-parameters" />
+      <module name="lesson08_auth-service (1)" options="-parameters" />
       <module name="lesson08_cart-service" options="-parameters" />
+      <module name="lesson08_cart-service (1)" options="-parameters" />
       <module name="lesson08_core-service" options="-parameters" />
+      <module name="lesson08_core-service (1)" options="-parameters" />
       <module name="lesson08_front-service" options="-parameters" />
+      <module name="lesson08_front-service (1)" options="-parameters" />
       <module name="lesson08_gateway-service" options="-parameters" />
+      <module name="lesson08_gateway-service (1)" options="-parameters" />
     </option>
   </component>
 </project>
