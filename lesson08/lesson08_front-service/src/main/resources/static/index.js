@@ -59,7 +59,6 @@
 })();
 
 angular.module('market').controller('indexController', function ($rootScope, $scope, $http, $location, $localStorage) {
-
     $scope.tryToAuth = function () {
         $http.post('http://localhost:5555/auth/authenticate', $scope.user)
             .then(function successCallback(response) {

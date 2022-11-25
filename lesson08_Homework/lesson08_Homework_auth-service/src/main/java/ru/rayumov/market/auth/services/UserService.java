@@ -24,11 +24,7 @@ public class UserService implements UserDetailsService {
 
 
     public Optional<User> findByUsername(String username) {
-        Optional<User> userOptional = userRepository.findByUsername(username);
-        if (userOptional.isEmpty()) {
-            throw new UsernameNotFoundException(String.format("Пользовтель '%' не найден", username));
-        }
-        return userOptional;
+        return userRepository.findByUsername(username);
     }
 
     @Override

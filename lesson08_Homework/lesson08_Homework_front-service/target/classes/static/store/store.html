@@ -1,0 +1,34 @@
+<div>
+    <p></p>
+    <h1>Market</h1>
+    <p></p>
+    <h3>Список товаров</h3>
+    <p></p>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>Название</td>
+            <td>Категория</td>
+            <td>Цена</td>
+            <td></td>
+            <td></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="p in products">
+            <td>{{p.id}}</td>
+            <td>{{p.title}}</td>
+            <td>{{p.categoryTitle}}</td>
+            <td>{{p.price}}</td>
+            <td>
+                <button class="btn btn-success" ng-click="addToCart(p.id)">Добавить в корзину</button>
+            </td>
+            <td>
+                <button class="btn btn-danger" ng-click="deleteProduct(p.id)">Удалить</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+

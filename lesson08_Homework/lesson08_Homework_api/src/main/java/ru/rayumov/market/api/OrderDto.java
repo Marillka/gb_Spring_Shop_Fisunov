@@ -5,26 +5,27 @@ import java.util.List;
 
 public class OrderDto {
 
-    private BigDecimal totalPrice;
-
-    private UserDto user;
+    private Long id;
 
     private List<OrderItemDto> items;
 
-    public BigDecimal getTotalPrice() {
-        return totalPrice;
+    private BigDecimal totalPrice;
+
+    public OrderDto() {
     }
 
-    public void setTotalPrice(BigDecimal totalPrice) {
+    public OrderDto(Long id, List<OrderItemDto> items, BigDecimal totalPrice) {
+        this.id = id;
+        this.items = items;
         this.totalPrice = totalPrice;
     }
 
-    public UserDto getUser() {
-        return user;
+    public Long getId() {
+        return id;
     }
 
-    public void setUser(UserDto user) {
-        this.user = user;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public List<OrderItemDto> getItems() {
@@ -35,12 +36,11 @@ public class OrderDto {
         this.items = items;
     }
 
-    public OrderDto() {
+    public BigDecimal getTotalPrice() {
+        return totalPrice;
     }
 
-    public OrderDto(BigDecimal totalPrice, UserDto user, List<OrderItemDto> items) {
+    public void setTotalPrice(BigDecimal totalPrice) {
         this.totalPrice = totalPrice;
-        this.user = user;
-        this.items = items;
     }
 }

@@ -1,89 +1,68 @@
-angular.module('market', ['ngStorage']).controller('indexController', function ($scope, $http, $rootScope, $localStorage) {
+(function () {
+    angular
+        .module('market', ['ngRoute', 'ngStorage'])
+        .config(config)
+        .run(run);
 
-    //---------------------------------  CONST -----------------------------------
+    function config($routeProvider) {
+        $routeProvider
+            .when('/', {
+                templateUrl: 'welcome/welcome.html',
+                controller: 'welcomeController'
+            })
+            .when('/store', {
+                templateUrl: 'store/store.html',
+                controller: 'storeController'
+            })
+            .when('/cart', {
+                templateUrl: 'cart/cart.html',
+                controller: 'cartController'
+            })
+            .when('/orders', {
+                templateUrl: 'orders/orders.html',
+                controller: 'ordersController'
+            })
+            .otherwise({
+                redirectTo: '/'
+            });
+    }
+
+    function run($rootScope, $http, $localStorage) {
+        if ($localStorage.springWebUser) {
+            try {
+                let jwt = $localStorage.springWebUser.token;
+                let payload = JSON.parse(atob(jwt.split('.')[1]));
+                let currentTime = parseInt(new Date().getTime() / 1000);
+                if (currentTime > payload.exp) {
+                    console.log("Token is expired!!!");
+                    delete $localStorage.springWebUser;
+                    $http.defaults.headers.common.Authorization = '';
+                }
+            } catch (e) {
+            }
+
+            if ($localStorage.springWebUser) {
+                $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
+            }
+
+            if (!$localStorage.marhcMarketGuestCartId) {
+                $http.get('http://localhost:5555/cart/api/v1/cart/generate_id')
+                    .then(function (response) {
+                        $localStorage.springWebUser = response.data.value;
+                    });
+            }
+
+        }
+    }
+})();
+
+
+angular.module('market').controller('indexController', function ($scope, $http, $rootScope, $localStorage, $location) {
 
     const marketAuthContextPath = 'http://localhost:5555/auth';
     const marketCoreContextPath = 'http://localhost:5555/core/api/v1';
     const marketCartContextPath = 'http://localhost:5555/cart/api/v1';
 
-    //---------------------------------  PREPARATION -----------------------------------
-
-    try {
-        let jwt = $localStorage.springWebUser.token;
-        let payload = JSON.parse(atob(jwt.split('.')[1]));
-        let currentTime = parseInt(new Date().getTime() / 1000);
-        if (currentTime > payload.exp) {
-            console.log("Token is expired!!!")
-            delete $localStorage.springWebUser;
-            $http.defaults.headers.common.Authorization = '';
-        }
-        if ($localStorage.springWebUser) {
-            $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
-        }
-    } catch (e) {
-
-    }
-
-    //---------------------------------  PRODUCTS -----------------------------------
-    $scope.fillTable = function () {
-        $http.get(marketCoreContextPath + '/products')
-            .then(function (response) {
-                $scope.products = response.data;
-            });
-    };
-
-    $scope.deleteProduct = function (id) {
-        $http.delete(marketCoreContextPath + '/products/' + id)
-            .then(function (response) {
-                $scope.fillTable();
-            });
-    }
-    //
-    // $scope.createNewProduct = function () {
-    //     $http.post(marketCoreContextPath + '/products', $scope.newProduct)
-    //         .then(function (response) {
-    //             $scope.newProduct = null;
-    //             $scope.fillTable();
-    //         });
-    // }
-
-//---------------------------------  CART -----------------------------------
-    $scope.fillCart = function () {
-        $http.get(marketCartContextPath + '/cart')
-            .then(function (response) {
-                $scope.cart = response.data;
-            });
-    };
-
-
-    $scope.addToCart = function (id) {
-        $http.get(marketCartContextPath + '/cart/add/' + id)
-            .then(function (response) {
-                $scope.fillCart();
-            });
-    }
-
-    $scope.clearCart = function () {
-        $http.delete(marketCartContextPath + '/cart/clear')
-            .then(function (response) {
-                $scope.fillCart();
-            });
-    }
-
-    $scope.changeQuantity = function (productTitle, delta) {
-        $http({
-            url: marketCartContextPath + '/cart/change_quantity',
-            method: 'GET',
-            params: {
-                productTitle: productTitle,
-                delta: delta
-            }
-        }).then(function (response) {
-            $scope.fillCart();
-        });
-    }
-
-    // ---------------------------------  AUTH -----------------------------------
     $scope.tryToAuth = function () {
         $http.post(marketAuthContextPath + "/authenticate", $scope.user)
             .then(function successCallback(response) {
@@ -93,9 +72,20 @@ angular.module('market', ['ngStorage']).controller('indexController', function (
 
                     $scope.user.username = null;
                     $scope.user.password = null;
+
+                    $location.path('/');
                 }
             }, function errorCallback(response) {
             });
+    };
+
+    $scope.tryToLogout = function () {
+        $scope.clearUser();
+    };
+
+    $scope.clearUser = function () {
+        delete $localStorage.springWebUser;
+        $http.defaults.headers.common.Authorization = '';
     };
 
     $rootScope.isUserLoggedIn = function () {
@@ -106,44 +96,6 @@ angular.module('market', ['ngStorage']).controller('indexController', function (
         }
     };
 
-
-    $scope.tryToLogout = function () {
-        $scope.clearUser();
-    };
-
-
-    $scope.clearUser = function () {
-        delete $localStorage.springWebUser;
-        $http.defaults.headers.common.Authorization = '';
-    };
-
-    // $scope.showUserInformationAlert = function () {
-    //     $http.get('http://localhost:8189/market-core/user_profile')
-    //         .then(function successCallback(response) {
-    //             alert('MY NAME IS: ' + response.data.username);
-    //             alert('MY EMAIL IS: ' + response.data.email);
-    //         }, function errorCallback(response) {
-    //             alert('UNAUTHORIZED');
-    //         });
-    // }
-
-    // --------------------------------- ORDER -----------------------------------
-
-    $scope.createOrder = function () {
-        $http.post(marketCoreContextPath + '/orders')
-            .then(function successCallback(response) {
-                console.log(response)
-                $scope.fillCart();
-                alert('Заказ создан успешно');
-            }, function errorCallback(response) {
-                $scope.fillCart();
-                alert('Не удалось создать заказ');
-            });
-    }
-
-    // --------------------------------- OTHER -----------------------------------
-    $scope.fillTable();
-    $scope.fillCart();
 });
 
 

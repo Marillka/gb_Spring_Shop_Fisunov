@@ -17,4 +17,9 @@ public class GlobalExceptionsHandler {
     public ResponseEntity<AppError> handleCartIsEmptyException(CartIsEmptyException e) {
         return new ResponseEntity<>(new AppError("CART_IS_EMPTY", e.getMessage()), HttpStatus.NOT_FOUND);
     }
+
+    @ExceptionHandler
+    public ResponseEntity<AppError> handleIllegalStateException(IllegalStateException e) {
+        return new ResponseEntity<>(new AppError("ILLEGAL_DATA_STATE", e.getMessage()), HttpStatus.BAD_REQUEST);
+    }
 }

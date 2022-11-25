@@ -4,42 +4,50 @@ import java.math.BigDecimal;
 
 public class OrderItemDto {
 
-    private OrderDto order;
+    private Long productId;
 
-    private ProductDto product;
+    private String productTitle;
+
+    private int quantity;
 
     private BigDecimal pricePerProduct;
 
     private BigDecimal price;
 
-    private int quantity;
-
     public OrderItemDto() {
     }
 
-    public OrderItemDto(OrderDto order, ProductDto product, BigDecimal pricePerProduct, BigDecimal price, int quantity) {
-        this.order = order;
-        this.product = product;
+    public OrderItemDto(Long productId, String productTitle, int quantity, BigDecimal pricePerProduct, BigDecimal price) {
+        this.productId = productId;
+        this.productTitle = productTitle;
+        this.quantity = quantity;
         this.pricePerProduct = pricePerProduct;
         this.price = price;
+    }
+
+
+    public Long getProductId() {
+        return productId;
+    }
+
+    public void setProductId(Long productId) {
+        this.productId = productId;
+    }
+
+    public String getProductTitle() {
+        return productTitle;
+    }
+
+    public void setProductTitle(String productTitle) {
+        this.productTitle = productTitle;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
-    }
-
-
-    public OrderDto getOrder() {
-        return order;
-    }
-
-    public void setOrder(OrderDto order) {
-        this.order = order;
-    }
-
-    public ProductDto getProduct() {
-        return product;
-    }
-
-    public void setProduct(ProductDto product) {
-        this.product = product;
     }
 
     public BigDecimal getPricePerProduct() {
@@ -56,14 +64,6 @@ public class OrderItemDto {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 }
 
