@@ -22,6 +22,10 @@
                 templateUrl: 'orders/orders.html',
                 controller: 'ordersController'
             })
+            .when('/registration', {
+                templateUrl: 'registration/registration.html',
+                controller: 'registrationController'
+            })
             .otherwise({
                 redirectTo: '/'
             });
@@ -45,10 +49,10 @@
                 $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.springWebUser.token;
             }
 
-            if (!$localStorage.marhcMarketGuestCartId) {
+            if (!$localStorage.marketGuestCartId) {
                 $http.get('http://localhost:5555/cart/api/v1/cart/generate_id')
                     .then(function (response) {
-                        $localStorage.springWebUser = response.data.value;
+                        $localStorage.marketGuestCartId = response.data.value;
                     });
             }
 

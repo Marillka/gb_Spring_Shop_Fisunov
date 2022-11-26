@@ -5,12 +5,18 @@ import lombok.Data;
 import ru.rayumov.market.api.ProductDto;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
 public class Cart {
     private List<CartItem> items;
     private BigDecimal totalPrice;
+
+    public Cart() {
+        this.items = new ArrayList<>();
+        this.totalPrice = BigDecimal.ZERO;
+    }
 
     public void add(ProductDto p) {
         for (CartItem item : items) {
@@ -36,7 +42,6 @@ public class Cart {
                     }
                     return;
                 }
-
                 if (delta < 0) {
                     item.decrementQuantity();
                     recalculate();

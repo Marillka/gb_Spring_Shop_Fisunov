@@ -1,49 +1,54 @@
 angular.module('market').controller('cartController', function ($scope, $http, $localStorage) {
 
-    const marketAuthContextPath = 'http://localhost:5555/auth';
     const marketCoreContextPath = 'http://localhost:5555/core/api/v1';
     const marketCartContextPath = 'http://localhost:5555/cart/api/v1';
 
-    $scope.createOrder = function () {
-        $http.post(marketCoreContextPath + '/orders')
-            .then(function successCallback(response) {
-                console.log(response)
-                $scope.fillCart();
-                alert('Заказ создан успешно');
-            }, function errorCallback(response) {
-                $scope.fillCart();
-                alert('Не удалось создать заказ');
-            });
-    }
-
-    $scope.fillCart = function () {
-        $http.get(marketCartContextPath + '/cart')
+    $scope.loadCart = function () {
+        $http.get(marketCartContextPath + '/cart/' + $localStorage.marketGuestCartId)
             .then(function (response) {
                 $scope.cart = response.data;
             });
     };
 
+    $scope.createOrder = function () {
+        $http.post(marketCoreContextPath + '/orders')
+            .then(function successCallback(response) {
+                console.log(response)
+                $scope.loadCart();
+                alert('Заказ создан успешно');
+            }, function errorCallback(response) {
+                $scope.loadCart();
+                alert('Не удалось создать заказ');
+            });
+    }
+
+
     $scope.clearCart = function () {
-        $http.delete(marketCartContextPath + '/cart/clear')
+        $http.delete(marketCartContextPath + '/cart/' + $localStorage.marketGuestCartId + '/clear')
             .then(function (response) {
-                $scope.fillCart();
+                $scope.loadCart();
             });
     }
 
     $scope.changeQuantity = function (productTitle, delta) {
         $http({
-            url: marketCartContextPath + '/cart/change_quantity',
+            url: marketCartContextPath + '/cart/' + $localStorage.marketGuestCartId + '/change_quantity',
             method: 'GET',
             params: {
                 productTitle: productTitle,
                 delta: delta
             }
         }).then(function (response) {
-            $scope.fillCart();
+            $scope.loadCart();
         });
     }
 
-    $scope.fillCart();
+    $scope.guestCreateOrder = function () {
+        alert('Для оформления заказа необходимо войти в учетную запись')
+    };
+
+
+    $scope.loadCart();
 
 });
 

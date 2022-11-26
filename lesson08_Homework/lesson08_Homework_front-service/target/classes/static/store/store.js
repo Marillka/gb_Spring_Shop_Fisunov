@@ -5,30 +5,28 @@ angular.module('market').controller('storeController', function ($scope, $http, 
     const marketCartContextPath = 'http://localhost:5555/cart/api/v1';
 
 
-    $scope.fillTable = function () {
+    $scope.loadProducts = function () {
         $http.get(marketCoreContextPath + '/products')
             .then(function (response) {
                 $scope.products = response.data;
             });
     };
 
+    $scope.addToCart = function (id) {
+        $http.get(marketCartContextPath + '/cart/' + $localStorage.marketGuestCartId + '/add/' + id)
+            .then(function (response) {
+
+            });
+    }
+
     $scope.deleteProduct = function (id) {
         $http.delete(marketCoreContextPath + '/products/' + id)
             .then(function (response) {
-                $scope.fillTable();
-            });
-    }
-
-    $scope.addToCart = function (id) {
-        $http.get(marketCartContextPath + '/cart/add/' + id)
-            .then(function (response) {
-
+                $scope.loadProducts();
             });
     }
 
 
-
-
-    $scope.fillTable();
+    $scope.loadProducts();
 
 });

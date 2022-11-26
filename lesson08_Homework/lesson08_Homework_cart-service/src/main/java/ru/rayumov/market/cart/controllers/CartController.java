@@ -41,7 +41,7 @@ public class CartController {
         cartService.clearCart(currentCartId);
     }
 
-    @GetMapping("/change_quantity")
+    @GetMapping("/{guestCartId}/change_quantity")
     public void changeQuantity(@RequestHeader(required = false) String username, @PathVariable String guestCartId, @RequestParam String productTitle, @RequestParam Integer delta) {
         String currentCartId = selectCartId(username, guestCartId);
         cartService.changeQuantity(currentCartId, productTitle, delta);

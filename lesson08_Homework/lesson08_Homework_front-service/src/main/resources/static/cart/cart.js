@@ -4,7 +4,7 @@ angular.module('market').controller('cartController', function ($scope, $http, $
     const marketCartContextPath = 'http://localhost:5555/cart/api/v1';
 
     $scope.loadCart = function () {
-        $http.get(marketCartContextPath + '/cart/')
+        $http.get(marketCartContextPath + '/cart/' + $localStorage.marketGuestCartId)
             .then(function (response) {
                 $scope.cart = response.data;
             });
@@ -24,7 +24,7 @@ angular.module('market').controller('cartController', function ($scope, $http, $
 
 
     $scope.clearCart = function () {
-        $http.delete(marketCartContextPath + '/cart/clear')
+        $http.delete(marketCartContextPath + '/cart/' + $localStorage.marketGuestCartId + '/clear')
             .then(function (response) {
                 $scope.loadCart();
             });
@@ -32,7 +32,7 @@ angular.module('market').controller('cartController', function ($scope, $http, $
 
     $scope.changeQuantity = function (productTitle, delta) {
         $http({
-            url: marketCartContextPath + '/cart/change_quantity',
+            url: marketCartContextPath + '/cart/' + $localStorage.marketGuestCartId + '/change_quantity',
             method: 'GET',
             params: {
                 productTitle: productTitle,
