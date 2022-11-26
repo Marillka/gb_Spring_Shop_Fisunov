@@ -47,6 +47,11 @@ public class CartController {
         cartService.changeQuantity(currentCartId, productTitle, delta);
     }
 
+    @GetMapping("/{guestCartId}/merge_carts")
+    public void mergeCarts(@RequestHeader String username, @PathVariable String guestCartId) {
+        cartService.mergeCarts(guestCartId, username);
+    }
+
     private String selectCartId(String username, String questCartId) {
         if (username != null) {
             return username;

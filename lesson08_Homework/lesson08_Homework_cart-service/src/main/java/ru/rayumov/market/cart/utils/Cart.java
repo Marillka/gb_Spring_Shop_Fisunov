@@ -26,9 +26,14 @@ public class Cart {
                 return;
             }
         }
-        CartItem cartItem = new CartItem(p.getId(), p.getTitle(), 1, p.getPrice(), p.getPrice());
+        CartItem cartItem = new CartItem(p.getId(), p.getTitle(), 1, p.getPrice(), p.getPrice(), p.getCategoryTitle());
         items.add(cartItem);
         recalculate();
+    }
+
+    public void mergeCart(Cart cart) {
+        List<CartItem> items1 = cart.getItems();
+        items.addAll(items1);
     }
 
     public void changeQuantity(String productTitle, Integer delta) {

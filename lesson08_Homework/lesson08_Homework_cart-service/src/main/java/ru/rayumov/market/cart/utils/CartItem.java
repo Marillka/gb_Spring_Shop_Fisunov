@@ -17,6 +17,8 @@ public class CartItem {
     private BigDecimal pricePerProduct;
     private BigDecimal price;
 
+    private String category;
+
     public void incrementQuantity() {
         if (quantity < 0) {
             quantity = 0;

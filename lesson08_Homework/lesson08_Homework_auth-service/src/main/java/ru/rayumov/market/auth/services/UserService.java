@@ -13,8 +13,8 @@ import ru.rayumov.market.api.RegisterUserDto;
 import ru.rayumov.market.auth.entities.Role;
 import ru.rayumov.market.auth.entities.User;
 import ru.rayumov.market.auth.exceptions.EmailAlreadyExistsException;
-import ru.rayumov.market.auth.exceptions.UserAlreadyExistsException;
 import ru.rayumov.market.auth.exceptions.NotSamePasswordsException;
+import ru.rayumov.market.auth.exceptions.UserAlreadyExistsException;
 import ru.rayumov.market.auth.repositories.RoleRepository;
 import ru.rayumov.market.auth.repositories.UserRepository;
 
@@ -35,6 +35,7 @@ public class UserService implements UserDetailsService {
     private final RoleRepository roleRepository;
 
     private final PasswordEncoder passwordEncoder;
+
 
 
     public Optional<User> findByUsername(String username) {

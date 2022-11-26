@@ -43,4 +43,12 @@ public class CartService {
     public void changeQuantity(String cartId, String productTitle, Integer delta) {
         getCurrentCart(cartId).changeQuantity(productTitle, delta);
     }
+
+    public void mergeCarts(String cartId, String username) {
+        Cart extraCart = getCurrentCart(cartId);
+        Cart mainCart = getCurrentCart(username);
+        mainCart.mergeCart(extraCart);
+        extraCart.clear();
+    }
+
 }
