@@ -11,7 +11,7 @@ angular.module('market').controller('cartController', function ($scope, $http, $
     };
 
     $scope.createOrder = function () {
-        $http.post(marketCoreContextPath + '/orders')
+        $http.post(marketCoreContextPath + '/orders', $localStorage.newOrder)
             .then(function successCallback(response) {
                 console.log(response)
                 $scope.loadCart();

@@ -15,17 +15,8 @@ public class GlobalExceptionsHandler {
     }
 
     @ExceptionHandler
-    public ResponseEntity<AppError> userAlreadyRegisteredException(UserAlreadyExistsException e) {
-        return new ResponseEntity<>(new AppError("USER_ALREADY_EXISTS", e.getMessage()), HttpStatus.CONFLICT);
+    public ResponseEntity<AppError> handleRegistrationException(RegistrationException e) {
+        return new ResponseEntity<>(new AppError("REGISTRATION_ERROR", e.getMessage()), HttpStatus.CONFLICT);
     }
 
-    @ExceptionHandler
-    public ResponseEntity<AppError> SamePasswordsException(NotSamePasswordsException e) {
-        return new ResponseEntity<>(new AppError("NOT_SAME_PASSWORDS", e.getMessage()), HttpStatus.CONFLICT);
-    }
-
-    @ExceptionHandler
-    public ResponseEntity<AppError> SamePasswordsException(EmailAlreadyExistsException e) {
-        return new ResponseEntity<>(new AppError("EMAIL_ALREADY_EXISTS", e.getMessage()), HttpStatus.CONFLICT);
-    }
 }

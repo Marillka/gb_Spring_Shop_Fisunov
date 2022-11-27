@@ -3,6 +3,7 @@ package ru.rayumov.market.core.controllers;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import ru.rayumov.market.api.OrderDetails;
 import ru.rayumov.market.api.OrderDto;
 import ru.rayumov.market.core.converters.OrderConverter;
 import ru.rayumov.market.core.services.OrderService;
@@ -26,7 +27,7 @@ public class OrderController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void createNewOrder(@RequestHeader String username) {
+    public void createNewOrder(@RequestHeader String username, @RequestBody OrderDetails orderDetails) {
         orderService.createNewOrder(username);
     }
 

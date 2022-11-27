@@ -27,6 +27,12 @@ public class Order {
     @Column(name = "username")
     private String username;
 
+    @Column(name = "address")
+    private String address;
+
+    @Column(name = "telephone_number")
+    private String telephoneNumber;
+
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> items;
 
