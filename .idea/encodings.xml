@@ -120,6 +120,10 @@
     <file url="file://$PROJECT_DIR$/lesson08_Homework/lesson08_gateway-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson08_Homework/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson08_Homework/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson09_RabbitMQ/rabbitmq-console/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson09_RabbitMQ/rabbitmq-console/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson09_RabbitMQ/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson09_RabbitMQ/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

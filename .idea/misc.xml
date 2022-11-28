@@ -32,6 +32,8 @@
         <option value="$PROJECT_DIR$/lesson07_Homework/lesson07_Homework_api/pom.xml" />
         <option value="$PROJECT_DIR$/lesson08/pom.xml" />
         <option value="$PROJECT_DIR$/lesson08_Homework/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson09_RabbitMQ/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson09_RabbitMQ/rabbitmq-console/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

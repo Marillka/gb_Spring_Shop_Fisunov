@@ -35,8 +35,10 @@
         <module name="lesson06_api" />
         <module name="lesson02" />
         <module name="lesson03" />
+        <module name="rabbitmq-console" />
         <module name="lesson05_cart-service" />
         <module name="lesson08_api" />
+        <module name="lesson09_RabbitMQ" />
         <module name="lesson06_front-service" />
         <module name="lesson07_Homework_api" />
         <module name="lesson06_Homework_auth-service" />
@@ -74,6 +76,7 @@
       <module name="api (1)" target="18" />
       <module name="cart-service (1)" target="11" />
       <module name="core-service (1)" target="11" />
+      <module name="gb_Spring_Shop_Fisunov" target="1.5" />
       <module name="lesson04" target="11" />
       <module name="lesson06-api" target="18" />
       <module name="lesson06-cart-service" target="11" />
