@@ -3,7 +3,7 @@ package consumer;
 import com.rabbitmq.client.*;
 
 public class RoutingConsumerApp {
-    private static final String EXCHANGE_NAME = "topic_exchange";
+    private static final String EXCHANGE_NAME = "topic_exchanger";
 
     public static void main(String[] args) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
@@ -16,7 +16,9 @@ public class RoutingConsumerApp {
         String queueName = channel.queueDeclare().getQueue();
         System.out.println("QUEUE NAME: " + queueName);
 
-        String routingKey = "prog.*.oop";
+//        String routingKey = "prog.*.oop";
+//        String routingKey = "*.oop";
+        String routingKey = "#.oop";
         channel.queueBind(queueName, EXCHANGE_NAME, routingKey);
         System.out.println(" [*] Waiting for messages with routing key (" + routingKey + ")");
 

@@ -14,9 +14,10 @@ public class RoutingProducerApp {
         factory.setHost("localhost");
         try (Connection connection = factory.newConnection();
              Channel channel = connection.createChannel()) {
+            // один обменник, который будет посылать сообщение в несколько слушателей
             channel.exchangeDeclare(EXCHANGE_NAME, BuiltinExchangeType.TOPIC);
 
-            String routingKey = "prog.java";
+            String routingKey = "java.oop";
             String message = "message123";
 
             channel.basicPublish(EXCHANGE_NAME, routingKey, null, message.getBytes("UTF-8"));
