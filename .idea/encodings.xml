@@ -126,6 +126,15 @@
     <file url="file://$PROJECT_DIR$/lesson09_RabbitMQ/rabbitmq-console/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson09_RabbitMQ/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson09_RabbitMQ/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10/lesson10_api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10/lesson10_api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10/lesson10_auth-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10/lesson10_cart-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10/lesson10_core-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10/lesson10_front-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10/lesson10_gateway-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
