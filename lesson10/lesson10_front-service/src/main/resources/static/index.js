@@ -45,15 +45,13 @@
             if ($localStorage.marchMarketUser) {
                 $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.marchMarketUser.token;
             }
-
-            // если у пользователя нет гостевого id для корзины, то запросим его
-            if (!$localStorage.marhcMarketGuestCartId) {
-                $http.get('http://localhost:5555/cart/api/v1/cart/generate_id')
-                    .then(function (response) {
-                        $localStorage.marchMarketGuestCartId = response.data.value;
-                    });
-            }
-
+        }
+        // если у пользователя нет гостевого id для корзины, то запросим его
+        if (!$localStorage.marhcMarketGuestCartId) {
+            $http.get('http://localhost:5555/cart/api/v1/cart/generate_id')
+                .then(function (response) {
+                    $localStorage.marchMarketGuestCartId = response.data.value;
+                });
         }
     }
 })();
