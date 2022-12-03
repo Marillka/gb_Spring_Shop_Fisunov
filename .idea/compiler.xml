@@ -44,6 +44,7 @@
         <module name="lesson06_Homework_auth-service" />
         <module name="lesson08_Homework_gateway-service" />
         <module name="lesson01_BasicApplication" />
+        <module name="lesson09_Homework" />
         <module name="lesson06_core-service" />
         <module name="lesson07_gateway-service" />
         <module name="lesson06_cart-service" />
@@ -76,6 +77,7 @@
       <module name="api (1)" target="18" />
       <module name="cart-service (1)" target="11" />
       <module name="core-service (1)" target="11" />
+      <module name="gb_Spring_Shop_Fisunov" target="1.5" />
       <module name="lesson04" target="11" />
       <module name="lesson06-api" target="18" />
       <module name="lesson06-cart-service" target="11" />
