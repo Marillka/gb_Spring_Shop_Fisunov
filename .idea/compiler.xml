@@ -20,6 +20,7 @@
         <module name="lesson08_Homework_api" />
         <module name="lesson04_Spring_AOP" />
         <module name="lesson10_core-service" />
+        <module name="lesson11_auth-service" />
         <module name="jwtBuilderTest" />
         <module name="lesson08_gateway-service" />
         <module name="lesson07_api" />
@@ -41,6 +42,7 @@
         <module name="rabbitmq-console" />
         <module name="lesson10_Homework_api" />
         <module name="lesson05_cart-service" />
+        <module name="lesson11_front-service" />
         <module name="lesson10_Homework_gateway-service" />
         <module name="lesson08_api" />
         <module name="lesson10_Homework_cart-service" />
@@ -49,13 +51,17 @@
         <module name="lesson06_front-service" />
         <module name="lesson07_Homework_api" />
         <module name="lesson10_auth-service" />
+        <module name="lesson11_api" />
         <module name="lesson06_Homework_auth-service" />
         <module name="lesson08_Homework_gateway-service" />
+        <module name="lesson11_cart-service" />
+        <module name="lesson11_core-service" />
         <module name="lesson01_BasicApplication" />
         <module name="lesson09_Homework" />
         <module name="lesson10_api" />
         <module name="lesson06_core-service" />
         <module name="lesson07_gateway-service" />
+        <module name="lesson11_gateway-service" />
         <module name="lesson10_front-service" />
         <module name="lesson06_cart-service" />
         <module name="lesson07_Homework_auth-service" />
@@ -89,6 +95,7 @@
       <module name="api (1)" target="18" />
       <module name="cart-service (1)" target="11" />
       <module name="core-service (1)" target="11" />
+      <module name="gb_Spring_Shop_Fisunov" target="1.5" />
       <module name="lesson04" target="11" />
       <module name="lesson06-api" target="18" />
       <module name="lesson06-cart-service" target="11" />
@@ -168,6 +175,11 @@
       <module name="lesson10_core-service" options="-parameters" />
       <module name="lesson10_front-service" options="-parameters" />
       <module name="lesson10_gateway-service" options="-parameters" />
+      <module name="lesson11_auth-service" options="-parameters" />
+      <module name="lesson11_cart-service" options="-parameters" />
+      <module name="lesson11_core-service" options="-parameters" />
+      <module name="lesson11_front-service" options="-parameters" />
+      <module name="lesson11_gateway-service" options="-parameters" />
     </option>
   </component>
 </project>

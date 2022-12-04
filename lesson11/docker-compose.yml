@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:9.6 # образ
+    domainname: postgres
+    ports:
+      # порт, первый порт хоста (нашей машины, на которой мы работаем), второй - порт контейнера
+      # говорим что порт 5432 надо пробросить на 5433
+      - "5433:5432"
+    environment:
+      # Для Postgresql можно задавать environment (переменные среды)
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    healthcheck:
+      # Бывает такое, что один образ зависит от другого. То есть пока у нас база в docker не запустилась
+      # смысла запускать flyway или redis нету. Поэтому указываем что у нас есть healthcheck - то есть как докер
+      # должен узнать что контейнер окончательно запустился и готов к работе.
+      # И прописываем команды постгресу на исполнение. Проверять запущен ли он.
+      test: [ "CMD", "pg_isready", "-q", "-U", "postgres" ]
+      interval: 5s
+      timeout: 1s
+      retries: 2
+
+  flyway:
+    image: boxfuse/flyway
+    # flyway должен понимать куда ему подключиться и прописываем url
+    # подключаемся через jdbc для СУБД postgresql
+    command: -url=jdbc:postgresql://postgres:5432/postgres -schemas=public -user=postgres -password=postgres -connectRetries=30 migrate
+    volumes:
+    # нужно отдать скрипты для flyaway, потому что просто с базой он ничего сделать не сможет
+    # говорим, то что лежит рядом с нами в папке flyway закинем в контейнер в папку flyway/sql
+      - ./flyway:/flyway/sql
+    depends_on:
+      # Указываем что нас сервис нельзя запускать до того как сервис с именем postgres не запущен.
+      - postgres
+
+  redis:
+    image: 'bitnami/redis:latest'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - "6379:6379"
