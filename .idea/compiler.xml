@@ -39,8 +39,12 @@
         <module name="lesson03" />
         <module name="lesson10_gateway-service" />
         <module name="rabbitmq-console" />
+        <module name="lesson10_Homework_api" />
         <module name="lesson05_cart-service" />
+        <module name="lesson10_Homework_gateway-service" />
         <module name="lesson08_api" />
+        <module name="lesson10_Homework_cart-service" />
+        <module name="lesson10_Homework_core-service" />
         <module name="lesson09_RabbitMQ" />
         <module name="lesson06_front-service" />
         <module name="lesson07_Homework_api" />
@@ -56,6 +60,7 @@
         <module name="lesson06_cart-service" />
         <module name="lesson07_Homework_auth-service" />
         <module name="lesson08_Homework_front-service" />
+        <module name="lesson10_Homework_auth-service" />
         <module name="lesson05_Homework_api" />
         <module name="lesson08_cart-service" />
         <module name="lesson08_core-service" />
@@ -68,6 +73,7 @@
         <module name="lesson06_Homework_cart-service" />
         <module name="lesson06_Homework_core-service" />
         <module name="lesson02_Homework" />
+        <module name="lesson10_Homework_front-service" />
         <module name="lesson03_Homework" />
         <module name="lesson07_Homework_front-service" />
         <module name="lesson08_Homework_core-service" />
@@ -83,7 +89,6 @@
       <module name="api (1)" target="18" />
       <module name="cart-service (1)" target="11" />
       <module name="core-service (1)" target="11" />
-      <module name="gb_Spring_Shop_Fisunov" target="1.5" />
       <module name="lesson04" target="11" />
       <module name="lesson06-api" target="18" />
       <module name="lesson06-cart-service" target="11" />
@@ -153,6 +158,11 @@
       <module name="lesson08_front-service (1)" options="-parameters" />
       <module name="lesson08_gateway-service" options="-parameters" />
       <module name="lesson08_gateway-service (1)" options="-parameters" />
+      <module name="lesson10_Homework_auth-service" options="-parameters" />
+      <module name="lesson10_Homework_cart-service" options="-parameters" />
+      <module name="lesson10_Homework_core-service" options="-parameters" />
+      <module name="lesson10_Homework_front-service" options="-parameters" />
+      <module name="lesson10_Homework_gateway-service" options="-parameters" />
       <module name="lesson10_auth-service" options="-parameters" />
       <module name="lesson10_cart-service" options="-parameters" />
       <module name="lesson10_core-service" options="-parameters" />

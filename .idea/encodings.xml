@@ -135,6 +135,15 @@
     <file url="file://$PROJECT_DIR$/lesson10/lesson10_gateway-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson10/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lesson10/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10_Homework/lesson10_Homework_api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10_Homework/lesson10_Homework_api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10_Homework/lesson10_Homework_auth-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10_Homework/lesson10_Homework_cart-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10_Homework/lesson10_Homework_core-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10_Homework/lesson10_Homework_front-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10_Homework/lesson10_Homework_gateway-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10_Homework/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lesson10_Homework/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
