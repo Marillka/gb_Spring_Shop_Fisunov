@@ -25,6 +25,7 @@
         <module name="lesson08_gateway-service" />
         <module name="lesson07_api" />
         <module name="lesson06_Homework_front-service" />
+        <module name="lesson11_Homework_front-service" />
         <module name="lesson07_cart-service" />
         <module name="lesson05_core-service" />
         <module name="lesson10_cart-service" />
@@ -41,8 +42,12 @@
         <module name="lesson10_gateway-service" />
         <module name="rabbitmq-console" />
         <module name="lesson10_Homework_api" />
+        <module name="lesson11_Homework_core-service" />
         <module name="lesson05_cart-service" />
+        <module name="lesson11_Homework_api" />
         <module name="lesson11_front-service" />
+        <module name="lesson11_Homework_gateway-service" />
+        <module name="lesson11_Homework_cart-service" />
         <module name="lesson10_Homework_gateway-service" />
         <module name="lesson08_api" />
         <module name="lesson10_Homework_cart-service" />
@@ -66,6 +71,7 @@
         <module name="lesson06_cart-service" />
         <module name="lesson07_Homework_auth-service" />
         <module name="lesson08_Homework_front-service" />
+        <module name="lesson11_Homework_auth-service" />
         <module name="lesson10_Homework_auth-service" />
         <module name="lesson05_Homework_api" />
         <module name="lesson08_cart-service" />
@@ -175,6 +181,11 @@
       <module name="lesson10_core-service" options="-parameters" />
       <module name="lesson10_front-service" options="-parameters" />
       <module name="lesson10_gateway-service" options="-parameters" />
+      <module name="lesson11_Homework_auth-service" options="-parameters" />
+      <module name="lesson11_Homework_cart-service" options="-parameters" />
+      <module name="lesson11_Homework_core-service" options="-parameters" />
+      <module name="lesson11_Homework_front-service" options="-parameters" />
+      <module name="lesson11_Homework_gateway-service" options="-parameters" />
       <module name="lesson11_auth-service" options="-parameters" />
       <module name="lesson11_cart-service" options="-parameters" />
       <module name="lesson11_core-service" options="-parameters" />

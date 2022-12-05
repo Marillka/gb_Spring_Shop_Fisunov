@@ -6,11 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class MarchMarketCoreApplication {
 
-	// План действий:
-	// 1. Подключение платёжной системы / OAuth 2.0
-	// 2. Безопасность на gateway
-	// 3. Перевести WebClient в асинхронный режим
-	// 4. Docker, WireMock, Swagger.
+	// Домашнее задание
+	// 1. Покройте все контроллеры и дто сваггер документацией.
+	// 2.* Попробуйте установить Докер и перенести настройки всего окружения на докер.
 
 	public static void main(String[] args) {
 		SpringApplication.run(MarchMarketCoreApplication.class, args);

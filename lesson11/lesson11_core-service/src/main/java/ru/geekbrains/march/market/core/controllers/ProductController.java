@@ -26,7 +26,7 @@ import java.math.BigDecimal;
 @RestController
 @RequestMapping("/api/v1/products")
 @RequiredArgsConstructor
-@Tag(name = "Продкуты", description = "Методы работы с продуктами")
+@Tag(name = "Продукты", description = "Методы работы с продуктами")
 public class ProductController {
     private final ProductService productService;
     private final ProductConverter productConverter;
