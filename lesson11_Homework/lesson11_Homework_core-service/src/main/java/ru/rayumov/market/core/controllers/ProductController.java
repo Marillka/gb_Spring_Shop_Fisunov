@@ -7,11 +7,12 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import ru.rayumov.market.api.PageDto;
 import ru.rayumov.market.api.ProductDto;
+import ru.rayumov.market.core.converters.PageConverter;
 import ru.rayumov.market.core.converters.ProductConverter;
 import ru.rayumov.market.core.entities.Product;
 import ru.rayumov.market.core.exceptions.AppError;
@@ -30,6 +31,8 @@ public class ProductController {
     private final ProductService productService;
     private final ProductConverter productConverter;
 
+    private final PageConverter pageConverter;
+
     @Operation(
             summary = "Запрос на получение всех продуктов",
             responses = {
@@ -39,7 +42,7 @@ public class ProductController {
             }
     )
     @GetMapping
-    public Page<ProductDto> getAllProduct(
+    public PageDto getAllProduct(
             @RequestParam(name = "p", defaultValue = "1") Integer page,
             @RequestParam(name = "page_size", defaultValue = "5") @Parameter(description = "Номер страницы", required = true) Integer pageSize,
             @RequestParam(name = "title_part", required = false) @Parameter(description = "Фильтр части названия продукта", required = false) String titlePart,
@@ -60,7 +63,7 @@ public class ProductController {
             spec = spec.and(ProductSpecifications.priceLessThanOrEqualsThan(BigDecimal.valueOf(maxPrice)));
         }
 
-        return productService.findAll(page - 1, pageSize, spec);
+        return pageConverter.entityToDto(productService.findAll(page - 1, pageSize, spec));
     }
 
     @Operation(
