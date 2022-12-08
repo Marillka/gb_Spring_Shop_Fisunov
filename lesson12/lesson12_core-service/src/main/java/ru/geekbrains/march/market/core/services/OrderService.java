@@ -12,6 +12,7 @@ import ru.geekbrains.march.market.core.repositories.OrderRepository;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -49,4 +50,9 @@ public class OrderService {
     public List<Order> findUserOrders(String username) {
         return orderRepository.findAllByUsername(username);
     }
+
+    public Optional<Order> findById(Long id) {
+        return orderRepository.findById(id);
+    }
+
 }

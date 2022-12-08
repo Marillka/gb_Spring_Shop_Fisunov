@@ -18,7 +18,6 @@ public class CartService {
     private final RedisTemplate<String, Object> redisTemplate;
 
 
-
     public Cart getCurrentCart(String cartId) {
         if (!redisTemplate.hasKey(cartId)) {
             Cart cart = new Cart();

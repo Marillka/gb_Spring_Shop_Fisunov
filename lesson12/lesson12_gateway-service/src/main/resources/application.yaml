@@ -23,6 +23,7 @@ spring:
             - StripPrefix=1
             - PrefixPath=/market-core
             - JwtAuthFilter
+            - NotForGuestsFilter
         - id: cart-service
           uri: http://localhost:8190
           predicates:
