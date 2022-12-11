@@ -30,8 +30,8 @@ public class Order {
     @Column(name = "address")
     private String address;
 
-    @Column(name = "telephone_number")
-    private String telephoneNumber;
+    @Column(name = "phone")
+    private String phone;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> items;

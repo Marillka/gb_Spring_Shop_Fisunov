@@ -10,17 +10,21 @@ angular.module('market').controller('cartController', function ($scope, $http, $
             });
     };
 
+
     $scope.createOrder = function () {
-        $http.post(marketCoreContextPath + '/orders', $localStorage.newOrder)
-            .then(function successCallback(response) {
-                console.log(response)
-                $scope.loadCart();
-                alert('Заказ создан успешно');
-            }, function errorCallback(response) {
-                $scope.loadCart();
-                alert('Не удалось создать заказ');
-            });
-    }
+        $http({
+            url: marketCoreContextPath + '/orders',
+            method: 'POST',
+            data: $scope.orderDetails
+        }).then(function successCallback(response) {
+            $localStorage.orderDetails = null;
+            $scope.loadCart();
+            alert('Заказ создан успешно');
+        }, function errorCallback(response) {
+            $scope.loadCart();
+            alert('Не удалось создать заказ');
+        });
+    };
 
 
     $scope.clearCart = function () {
@@ -45,6 +49,15 @@ angular.module('market').controller('cartController', function ($scope, $http, $
 
     $scope.guestCreateOrder = function () {
         alert('Для оформления заказа необходимо войти в учетную запись')
+    };
+
+
+    $scope.isCartEmpty = function () {
+        if ($localStorage.cart) {
+            return false;
+        } else {
+            return true;
+        }
     };
 
 

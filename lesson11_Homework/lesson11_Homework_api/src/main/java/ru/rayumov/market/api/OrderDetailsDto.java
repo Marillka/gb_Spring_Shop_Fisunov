@@ -2,19 +2,19 @@ package ru.rayumov.market.api;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
-public class OrderDetails {
+public class OrderDetailsDto {
     @Schema(description = "Адресс доставки", required = true, example = "г.Москва, ул. Комсомольская, д.5, кв. 54")
     private String address;
 
     @Schema(description = "Телефон покупателя", required = true, example = "79169984856")
-    private String telephone;
+    private String phone;
 
-    public OrderDetails() {
+    public OrderDetailsDto() {
     }
 
-    public OrderDetails(String address, String telephone) {
+    public OrderDetailsDto(String address, String phone) {
         this.address = address;
-        this.telephone = telephone;
+        this.phone = phone;
     }
 
     public String getAddress() {
@@ -25,11 +25,11 @@ public class OrderDetails {
         this.address = address;
     }
 
-    public String getTelephone() {
-        return telephone;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
